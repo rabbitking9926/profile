@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Nguyễn Công Bảo</title>
+    <style>
+        /* 1. THIẾT LẬP TOÀN MÀN HÌNH */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+        }
+
+        /* Nền Gradient chuyển động toàn màn hình */
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 2. KHUNG NỘI DUNG CHÍNH (BODY) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px); /* Hiệu ứng kính mờ */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 3. PHẦN HEAD (Avatar & Tên) */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        .sub-text { opacity: 0.9; font-weight: 300; margin-bottom: 30px; }
+
+        /* 4. PHẦN THÔNG TIN CHI TIẾT */
+        .info-list {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .info-list p { margin-bottom: 8px; font-size: 0.95rem; }
+        .info-list strong { color: #fff; }
+
+        /* 5. PHẦN FOOT (Các đường link truy cập) */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: #1e3c72;
+            background: white;
+            padding: 12px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: block;
+        }
+
+        .btn-link:hover {
+            transform: scale(1.05);
+            background: #23a6d5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Bảo" class="profile-img">
+            <h1>Nguyễn Công Bảo</h1>
+            <p class="sub-text">Sinh viên Công nghệ Thông tin</p>
+        </header>
+
+        <main class="info-list">
+            <p>🆔 <strong>Mã SV:</strong> 24103003</p>
+            <p>🎂 <strong>Ngày sinh:</strong> 09/09/2006</p>
+            <p>🏫 <strong>Khoa:</strong> KH Tự nhiên và Công nghệ</p>
+            <p>💻 <strong>Lớp:</strong> CNTT K24</p>
+        </main>
+
+        <footer class="links">
+            <a href="https://www.facebook.com/nguyen.bao.477301" target="_blank" class="btn-link">Kết nối qua Facebook</a>
+
+        </footer>
+    </div>
+
+</body>
+</html>
